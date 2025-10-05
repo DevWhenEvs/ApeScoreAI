@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   padding: 2em 4em;
   z-index: 100000000;
   mix-blend-mode: difference;

@@ -115,6 +115,7 @@ body {
   height: 100%;
   background-color: #000;
   color: var(--foreground);
+  overflow-x: hidden;
 }
 
 img {
