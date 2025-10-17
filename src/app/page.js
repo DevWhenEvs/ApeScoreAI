@@ -214,7 +214,7 @@ export default function Home() {
                     ApeScoreAI revolutionizes DeFi credit scoring by gamifying your trading performance on Solana. Our AI analyzes your wallet activity, trading success, and risk-taking behavior to generate a comprehensive "Ape Score" from 0-1000.
                   </p>
                   <p>
-                    Connect your Solana wallet and our algorithm immediately begins analyzing trades from Jupiter, Raydium, and other major DEXs. Your score unlocks exclusive rewards, $APE token airdrops, and access to higher-tier trading opportunities in the degen ecosystem.
+                    Connect your Solana wallet and our algorithm immediately begins analyzing trades from Jupiter, Raydium, and other major DEXs. Your score unlocks exclusive rewards, $APEAI token airdrops, and access to higher-tier trading opportunities in the degen ecosystem.
                   </p>
                 </div>
                 <div className="prompt-example">
@@ -231,7 +231,7 @@ export default function Home() {
                         <div className="hero-img-overlay"></div>
                       </div>
                       <div className="prompt-example-result-item-title">
-                        <h4>2016 — Built with pioneering generative tools</h4>
+                        <h4>Powerful AI Blockchain Analysis</h4>
                       </div>
                     </div>
                     <div className="prompt-example-result-item">
@@ -240,7 +240,7 @@ export default function Home() {
                         <div className="hero-img-overlay"></div>
                       </div>
                       <div className="prompt-example-result-item-title">
-                        <h4>2024 — Created with ApeScoreAI V2</h4>
+                        <h4>Unlock your full Degen Potential</h4>
                       </div>
                     </div>
                   </div>
@@ -269,7 +269,7 @@ export default function Home() {
                 <div className="case-studies-copy">
                   <h2>How Does ApeScore Track Your Trading Mastery?</h2>
                   <p>
-                    Our gamification system transforms your Solana trading activity into an engaging experience with scores, badges, levels, leaderboards, and challenges. From "Ape Novice" to "Degen God," climb the ranks and earn $APE rewards.
+                    Our gamification system transforms your Solana trading activity into an engaging experience with scores, badges, levels, leaderboards, and challenges. From "Ape Novice" to "Degen God," climb the ranks and earn $APEAI rewards.
                   </p>
                 </div>
               </div>
@@ -424,7 +424,7 @@ export default function Home() {
             <div className="container">
               <ShuffleText
                 as="h2"
-                text="Timeless Art Through a New Lens"
+                text="ApeScoreAI runs on pure degen energy"
                 triggerOnScroll={true}
               />
             </div>
@@ -433,15 +433,22 @@ export default function Home() {
           <div className="works-content">
             <div className="container">
               <div className="col">
-                <p className="primary">[ Creative Explorations ]</p>
+                <h3>TOKENOMICS:</h3>
+                <p className="primary">[Token: $APEAI<br/>Total Supply: 800,000,000 (Fixed)<br/>Taxes: 0% (Because we're not here to nickel-and-dime the jungle)<br/>Chain: Solana<br/>Launchpad: Pump.fun]</p>
               </div>
               <div className="col">
                 <div className="works-copy">
-                  <h2>Can machines innovate Like Human Artists?</h2>
+                  <h2>Rewards that Keep Swinging</h2>
                   <p>
-                    These experiments explore the potential of advanced AI
-                    tools, such as Midjourney and DALL-E 3, to reimagine classic
-                    masterpieces through unique and boundary-pushing prompts.
+                    Every 2 days, random airdrops and holder rewards go out to the community. The longer you hold, the higher your ApeScore, and the more likely you are to get rewarded for staying diamond-handed.
+                  </p>
+                  <h2>Fair, Fun, and Fully Transparent</h2>
+                  <p>
+                    &nbsp;&nbsp;• Fixed supply means no inflation monkey business<br/><br/>
+                    &nbsp;&nbsp;• No buy/sell taxes — what you earn is what you keep<br/><br/>
+                    &nbsp;&nbsp;• Locked dev allocation for trust and transparency<br/><br/>
+                    &nbsp;&nbsp;• Rewards cycle every 48 hours for active holders<br/><br/>
+                    ApeScoreAI isn't just a token — it's a reputation game for the Solana jungle. Degens earn their score. Legends build it.
                   </p>
                 </div>
               </div>
