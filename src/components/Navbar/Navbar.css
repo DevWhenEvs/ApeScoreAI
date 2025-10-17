@@ -13,11 +13,25 @@
 .navbar-col {
   flex: 1;
   display: flex;
-  gap: 2emc;
+  gap: 2em;
+}
+
+.navbar-col:last-child {
+  justify-content: flex-end;
 }
 
 .navbar-sub-col {
   flex: 1;
+}
+
+.nav-items {
+  flex: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  white-space: nowrap;
+  min-width: 150px;
 }
 
 .logo h3 {
@@ -41,6 +55,7 @@
 .nav-items p {
   text-transform: none;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 
 .music-toggle-wrapper {

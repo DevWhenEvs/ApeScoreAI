@@ -255,7 +255,8 @@
   z-index: 1;
 }
 
-.case-studies-img img {
+.case-studies-img img,
+.case-studies-img video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -266,6 +267,13 @@
 
 .case-studies-item-inner-img {
   display: none;
+}
+
+/* Make videos fill the same space as images */
+.case-studies-item-inner-img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .case-studies-item-inner-link {

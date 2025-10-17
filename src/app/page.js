@@ -306,9 +306,13 @@ export default function Home() {
                 <h3>Wallet Activity Analysis</h3>
                 <p className="primary">[ Transaction Volume — DeFi Engagement ]</p>
                 <div className="case-studies-item-inner-img">
-                  <img
-                    src="/images/home/case-study-2.jpeg"
-                    alt="Wallet activity heatmap"
+                  <video
+                    src="/videos/wallet.mp4"
+                    alt="Wallet activity demonstration"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                   />
                 </div>
                 <p>
@@ -329,9 +333,13 @@ export default function Home() {
                   [ Leverage Analysis — Memecoin Investments ]
                 </p>
                 <div className="case-studies-item-inner-img">
-                  <img
-                    src="/images/home/case-study-3.jpeg"
+                  <video
+                    src="/videos/risk.mp4"
                     alt="Risk analysis dashboard"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                   />
                 </div>
                 <p>
@@ -360,7 +368,14 @@ export default function Home() {
               </div>
             </div>
             <div className="case-studies-img case-studies-img-2">
-              <img src="/images/home/case-study-2.jpeg" alt="" />
+              <video
+                src="/videos/wallet.mp4"
+                alt="Wallet activity demonstration"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
               <div className="hero-img-overlay"></div>
               <div className="case-studies-img-link">
                 <Link href="/archive">
@@ -372,7 +387,14 @@ export default function Home() {
               </div>
             </div>
             <div className="case-studies-img case-studies-img-3">
-              <img src="/images/home/case-study-3.jpeg" alt="" />
+              <video
+                src="/videos/risk.mp4"
+                alt="Risk analysis dashboard"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
               <div className="hero-img-overlay"></div>
               <div className="case-studies-img-link">
                 <Link href="/archive">
