@@ -63,7 +63,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-sub-col time">
-          <p>{isClient ? time : '--:--:-- --'}</p>
+          <p suppressHydrationWarning>{isClient ? time : '--:--:-- --'}</p>
         </div>
       </div>
       <div className="navbar-col">
