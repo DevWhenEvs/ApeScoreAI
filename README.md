@@ -1,23 +1,24 @@
-# ALGORA - AI Art Portal Template
+# ApeScoreAI - Your Degen Credit Score on Solana
 
-![ALGORA Template Preview](./public/image1.jpg)
+![ApeScoreAI Preview](./public/images/home/ape-hero.jpg)
 
-## 🌟 🔗 [LIVE DEMO](https://website-template-07.vercel.app/) 🌟
+## 🦍 🔗 [LIVE DEMO](https://apescoreai.vercel.app/) 🦍
 
-👆 Click above to see the template in action!
+👆 Gamified credit scoring for degens on the Solana blockchain!
 
-A sophisticated AI art portal template built with **Next.js 15** and modern web technologies, featuring cinematic animations, geometric backgrounds, and immersive visual storytelling. Perfect for AI artists, digital creatives, tech companies, and innovation showcases exploring the fusion of art and algorithms.
+A professional, legitimate-looking website for ApeScoreAI, a gamified "credit score" utility project for degens on the Solana blockchain. Built with **Next.js 15** and modern web technologies, featuring cinematic animations, neon effects, and immersive degen experience. Perfect for tracking trading success, wallet activity, and risk-taking behavior with gamification elements.
 
 ## ✨ Features
 
-- **AI-Driven Design**: Professional portal layout with futuristic AI art aesthetics
+- **Degen-Driven Design**: Professional portal layout with neon crypto aesthetics
 - **Cinematic Animations**: Powered by GSAP 3.12.7 with advanced scroll-triggered effects
-- **Geometric Backgrounds**: Dynamic geometric patterns with scroll-based transformations
+- **Crypto Background Patterns**: Dynamic geometric patterns transforming into blockchain visuals
 - **Smooth Scrolling**: Ultra-smooth navigation with React Lenis integration
-- **Interactive Music Toggle**: Built-in audio controls with Lottie animations
-- **Case Studies Section**: Showcase AI art projects with pinned image galleries
-- **Carousel Projects**: Innovative clip-path transitions for project showcases
-- **Archive System**: Dedicated archive pages for AI art collections
+- **Interactive Degen Mode Toggle**: Built-in neon effects and sound alerts with Lottie animations
+- **Gamification Features**: Scores, badges, levels, and leaderboards for trading performance
+- **Wallet Integration**: Solana wallet connection via Phantom, Solflare adapters
+- **Score Display System**: Real-time ApeScore visualization (0-1000 scale)
+- **Leaderboard System**: Dedicated archive pages converted to user rankings
 - **Responsive Design**: Fully optimized for all devices and screen sizes
 - **Performance Optimized**: Built with Next.js 15 for excellent SEO and loading speeds
 

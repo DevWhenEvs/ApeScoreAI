@@ -35,7 +35,7 @@ footer .container {
 }
 
 footer h1 {
-  font-size: 26vw;
+  font-size: 12vw;
   text-align: center;
 }
 
@@ -103,6 +103,6 @@ footer h3 {
   }
 
   footer h1 {
-    font-size: 25vw;
+    font-size: 10vw;
   }
 }

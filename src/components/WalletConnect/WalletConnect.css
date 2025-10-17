@@ -1,0 +1,103 @@
+.wallet-connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wallet-button {
+  background: var(--gradient-primary) !important;
+  border: 2px solid var(--neon-green) !important;
+  border-radius: 12px !important;
+  padding: 1rem 2rem !important;
+  font-family: "NeueBit", monospace !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  color: var(--background) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.wallet-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.wallet-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(57, 255, 20, 0.3) !important;
+  border-color: var(--neon-blue) !important;
+}
+
+.wallet-button:hover::before {
+  opacity: 0.8;
+}
+
+.wallet-button:active {
+  transform: translateY(0) !important;
+}
+
+/* Custom styles for connected state */
+.wallet-button[data-connected="true"] {
+  background: var(--gradient-secondary) !important;
+  border-color: var(--neon-orange) !important;
+}
+
+.wallet-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 0.9rem;
+  color: var(--foreground-tertiary);
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Override default wallet adapter styles */
+.wallet-adapter-button {
+  background: transparent !important;
+}
+
+.wallet-adapter-button-trigger {
+  background: var(--gradient-primary) !important;
+}
+
+@media (max-width: 768px) {
+  .wallet-button {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}

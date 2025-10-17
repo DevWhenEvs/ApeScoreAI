@@ -182,20 +182,17 @@ export default function Home() {
       <div className="app" ref={container}>
         <section className="hero">
           <div className="hero-img">
-            <img src="/images/home/hero.jpeg" alt="" />
+            <img src="/images/home/background3.png" alt="" />
           </div>
           <div className="hero-img-overlay"></div>
           <div className="hero-img-gradient"></div>
           <div className="container">
             <div className="hero-copy">
               <div className="hero-copy-col">
-                <ShuffleText as="h3" text="A brief journey into" />
-                <ShuffleText as="h1" text="The Fusion of Art and Algorithms" />
+                <ShuffleText as="h3" text="Your Degen Credit Score on" />
+                <ShuffleText as="h1" text="ApeScoreAI: The Solana Blockchain" />
               </div>
               <div className="hero-copy-col">
-                <div className="hero-icon">
-                  <img src="/images/home/hero-abstract-icon.png" alt="" />
-                </div>
               </div>
             </div>
           </div>
@@ -209,24 +206,15 @@ export default function Home() {
           <div className="intro-container">
             <div className="container">
               <div className="col">
-                <p className="primary">[ Setting the Scene ]</p>
+                <p className="primary">[ How It Works ]</p>
               </div>
               <div className="col">
                 <div className="intro-copy">
                   <p>
-                    Algora has revolutionized the creative potential of AI,
-                    advancing from basic, low-resolution outputs to producing
-                    hyper-realistic, high-definition visuals that push the
-                    boundaries of imagination and innovation.
+                    ApeScoreAI revolutionizes DeFi credit scoring by gamifying your trading performance on Solana. Our AI analyzes your wallet activity, trading success, and risk-taking behavior to generate a comprehensive "Ape Score" from 0-1000.
                   </p>
                   <p>
-                    This progress has opened the doors to powerful visual
-                    creation tools for users of all skill levels, from seasoned
-                    professionals to casual creators. Yet, it has also raised
-                    critical debates around the ethical challenges of
-                    AI-generated content, such as intellectual property
-                    disputes, the spread of false information, and questions
-                    surrounding the essence of true artistic expression.
+                    Connect your Solana wallet and our algorithm immediately begins analyzing trades from Jupiter, Raydium, and other major DEXs. Your score unlocks exclusive rewards, $APE token airdrops, and access to higher-tier trading opportunities in the degen ecosystem.
                   </p>
                 </div>
                 <div className="prompt-example">
@@ -252,7 +240,7 @@ export default function Home() {
                         <div className="hero-img-overlay"></div>
                       </div>
                       <div className="prompt-example-result-item-title">
-                        <h4>2024 — Created with Algora V2</h4>
+                        <h4>2024 — Created with ApeScoreAI V2</h4>
                       </div>
                     </div>
                   </div>
@@ -267,7 +255,7 @@ export default function Home() {
             <div className="container">
               <ShuffleText
                 as="h2"
-                text="Dive Into New Success Stories"
+                text="Unlock Your Degen Potential"
                 triggerOnScroll={true}
               />
             </div>
@@ -275,16 +263,13 @@ export default function Home() {
           <div className="case-studies-content">
             <div className="container">
               <div className="col">
-                <p className="primary">[ Case Studies ]</p>
+                <p className="primary">[ Features & Gamification ]</p>
               </div>
               <div className="col">
                 <div className="case-studies-copy">
-                  <h2>How is AI Reshaping Artistic Boundaries?</h2>
+                  <h2>How Does ApeScore Track Your Trading Mastery?</h2>
                   <p>
-                    Generative AI has rapidly advanced, moving beyond its humble
-                    beginnings of basic visual outputs to now creating stunning,
-                    lifelike artworks that challenge our perceptions of
-                    creativity and technology.
+                    Our gamification system transforms your Solana trading activity into an engaging experience with scores, badges, levels, leaderboards, and challenges. From "Ape Novice" to "Degen God," climb the ranks and earn $APE rewards.
                   </p>
                 </div>
               </div>
@@ -296,23 +281,19 @@ export default function Home() {
           <div className="case-studies-items-content col">
             <div className="case-studies-item case-studies-item-1">
               <div className="container">
-                <h3>Art in the Age of Algorithms</h3>
-                <p className="primary">[ Lumina Horizon — Zara Lee ]</p>
+                <h3>Trading Success Metrics</h3>
+                <p className="primary">[ PNL Tracking — Win/Loss Analysis ]</p>
                 <div className="case-studies-item-inner-img">
                   <img
                     src="/images/home/case-study-1.jpeg"
-                    alt="Futuristic AI-generated art"
+                    alt="Trading success visualization"
                   />
                 </div>
                 <p>
-                  Zara Lee’s AI-powered installation captivates audiences at the
-                  Global Digital Arts Forum, raising questions about the fusion
-                  of human intent and machine precision. The work highlights the
-                  limitless potential of AI as a creative partner in the world
-                  of modern art.
+                  Our AI analyzes your trading performance across Jupiter, Raydium, and major Solana DEXs. Track your profit/loss ratios, success rates, and identify patterns in your trading behavior to maximize your ApeScore.
                 </p>
                 <div className="case-studies-item-inner-link">
-                  <Link href="/archive">Discover the Journey</Link>
+                  <Link href="/archive">View Leaderboard</Link>
                   <div className="link-icon">
                     <MdArrowOutward size={24} />
                   </div>
@@ -322,23 +303,19 @@ export default function Home() {
 
             <div className="case-studies-item case-studies-item-2">
               <div className="container">
-                <h3>The Dawn of AI-Driven Fashion</h3>
-                <p className="primary">[ Visionary Threads — Elena Marquez ]</p>
+                <h3>Wallet Activity Analysis</h3>
+                <p className="primary">[ Transaction Volume — DeFi Engagement ]</p>
                 <div className="case-studies-item-inner-img">
                   <img
                     src="/images/home/case-study-2.jpeg"
-                    alt="AI-driven fashion design showcase"
+                    alt="Wallet activity heatmap"
                   />
                 </div>
                 <p>
-                  Elena Marquez launches the first fashion magazine curated
-                  entirely by AI, featuring futuristic designs and concepts that
-                  redefine the boundaries of creativity. While widely praised
-                  for its innovation, the magazine ignites debates over the role
-                  of human designers in a machine-led creative process.
+                  Monitor transaction frequency, volume, and DeFi protocol interactions. Our algorithm tracks your engagement with liquidity pools, yield farming, and token swaps to build a comprehensive activity profile for your ApeScore.
                 </p>
                 <div className="case-studies-item-inner-link">
-                  <Link href="/archive">Read Full Story</Link>
+                  <Link href="/archive">Analyze Activity</Link>
                   <div className="link-icon">
                     <MdArrowOutward size={24} />
                   </div>
@@ -347,25 +324,21 @@ export default function Home() {
             </div>
             <div className="case-studies-item case-studies-item-3">
               <div className="container">
-                <h3>The Rise of AI-Curated Art Awards</h3>
+                <h3>Risk-Taking Behavior</h3>
                 <p className="primary">
-                  [ Synthetic Realities — Sophia Armitage ]
+                  [ Leverage Analysis — Memecoin Investments ]
                 </p>
                 <div className="case-studies-item-inner-img">
                   <img
                     src="/images/home/case-study-3.jpeg"
-                    alt="AI-curated artwork showcase"
+                    alt="Risk analysis dashboard"
                   />
                 </div>
                 <p>
-                  Sophia Armitage’s groundbreaking AI-curated exhibition
-                  highlights the creative potential of machine-generated art.
-                  The event features photorealistic works of entirely fictional
-                  subjects, sparking a discussion about bias, authenticity, and
-                  AI’s role in shaping the future of artistic recognition.
+                  Evaluate your appetite for high-risk trades, memecoin investments, and leveraged positions. Our scoring algorithm rewards calculated risks while identifying patterns that separate true degens from paper hands.
                 </p>
                 <div className="case-studies-item-inner-link">
-                  <Link href="/archive">Explore the Exhibit</Link>
+                  <Link href="/archive">Check Risk Score</Link>
                   <div className="link-icon">
                     <MdArrowOutward size={24} />
                   </div>

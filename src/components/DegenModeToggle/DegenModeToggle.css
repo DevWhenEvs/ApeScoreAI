@@ -1,0 +1,173 @@
+.degen-toggle {
+  position: relative;
+  z-index: 100;
+}
+
+.degen-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--background-secondary);
+  border: 2px solid var(--foreground-muted);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.degen-toggle.active .degen-toggle-btn {
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+  border-color: var(--neon-green);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+  animation: neonPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  from {
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(57, 255, 20, 0.8), 0 0 40px rgba(191, 0, 255, 0.6);
+  }
+}
+
+.degen-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.degen-toggle.active .degen-icon {
+  transform: scale(1.2);
+  animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1.4);
+  }
+}
+
+.neon-pulse {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.degen-toggle.active .neon-pulse {
+  opacity: 1;
+}
+
+.degen-label {
+  font-family: "NeueBit", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--foreground-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease;
+}
+
+.degen-toggle.active .degen-label {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px var(--neon-green);
+}
+
+.degen-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.particle {
+  position: absolute;
+  font-size: 0.8rem;
+  animation: particleFloat 2s ease-in-out infinite;
+  animation-delay: var(--delay);
+  transform: translate(var(--x), var(--y));
+}
+
+@keyframes particleFloat {
+  0% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(var(--x), calc(var(--y) - 20px)) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), calc(var(--y) - 40px)) scale(0);
+  }
+}
+
+/* Global Degen Mode Effects */
+body.degen-mode {
+  animation: degenGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes degenGlow {
+  from {
+    filter: hue-rotate(0deg) saturate(1);
+  }
+  to {
+    filter: hue-rotate(10deg) saturate(1.2);
+  }
+}
+
+body.degen-mode *:not(.degen-toggle):not(.degen-toggle-btn):not(.degen-label):not(.degen-icon) {
+  text-shadow: 0 0 5px currentColor;
+}
+
+body.degen-mode h1,
+body.degen-mode h2,
+body.degen-mode h3,
+body.degen-mode h4 {
+  animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 5px var(--neon-green);
+  }
+  to {
+    text-shadow: 0 0 20px var(--neon-green), 0 0 30px var(--neon-blue);
+  }
+}
+
+body.degen-mode .score-display,
+body.degen-mode .wallet-connect {
+  animation: componentGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes componentGlow {
+  from {
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(57, 255, 20, 0.6), 0 0 60px rgba(191, 0, 255, 0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  .degen-toggle-btn {
+    padding: 0.4rem 0.8rem;
+    gap: 0.4rem;
+  }
+  
+  .degen-icon {
+    font-size: 1rem;
+  }
+  
+  .degen-label {
+    font-size: 0.7rem;
+  }
+}

@@ -5,8 +5,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 
 export const metadata = {
-  title: "ALGORA — Your AI art portal",
-  description: "AI-driven artistry and creative exploration platform",
+  title: "ApeScoreAI: Your Solana Blockchain Credit Score",
+  description: "Gamified credit scoring for trading success, wallet activity, and risk-taking behavior on Solana. Connect your wallet, get scored, earn $APE rewards.",
 };
 
 export default function RootLayout({ children }) {

@@ -7,17 +7,17 @@ import dynamic from "next/dynamic";
 
 import "./Navbar.css";
 
-const MusicToggle = dynamic(() => import("../MusicToggle/MusicToggle"), {
-  ssr: false,
-});
 
 const Navbar = () => {
   const [time, setTime] = useState("");
+  const [isClient, setIsClient] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const isHomePage = pathname === "/";
 
   useEffect(() => {
+    setIsClient(true);
+    
     const updateTime = () => {
       const now = new Date();
       const timeString = now.toLocaleTimeString("en-US", {
@@ -59,30 +59,30 @@ const Navbar = () => {
       <div className="navbar-col">
         <div className="navbar-sub-col logo">
           <Link href="/">
-            <h3>Algora</h3>
+            <h3>🦍 ApeScoreAI</h3>
           </Link>
         </div>
         <div className="navbar-sub-col time">
-          <p>{time}</p>
+          <p>{isClient ? time : '--:--:-- --'}</p>
         </div>
       </div>
       <div className="navbar-col">
         <div className="navbar-sub-col nav-items">
           <a href="#intro" onClick={(e) => handleNavigation(e, "intro")}>
-            <p>The Origins</p>
+            <p>How It Works</p>
           </a>
           <a
             href="#case-studies"
             onClick={(e) => handleNavigation(e, "case-studies")}
           >
-            <p>Highlights</p>
+            <p>Features</p>
           </a>
           <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
-            <p>Innovations</p>
+            <p>Tokenomics</p>
           </a>
-        </div>
-        <div className="navbar-sub-col music-toggle-wrapper">
-          <MusicToggle />
+          <Link href="/archive">
+            <p>Leaderboard</p>
+          </Link>
         </div>
       </div>
     </div>

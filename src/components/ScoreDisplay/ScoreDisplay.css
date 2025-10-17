@@ -1,0 +1,216 @@
+.score-display {
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--background-secondary), var(--background-tertiary));
+  border: 2px solid var(--neon-green);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(57, 255, 20, 0.1);
+  transition: all 0.3s ease;
+}
+
+.score-display:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(57, 255, 20, 0.2);
+  border-color: var(--neon-blue);
+}
+
+.score-display.disconnected {
+  text-align: center;
+  border-color: var(--foreground-muted);
+  background: var(--background-secondary);
+}
+
+.score-placeholder h3 {
+  color: var(--foreground-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+.score-placeholder p {
+  color: var(--foreground-muted);
+  font-size: 1rem;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.score-circle {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.score-ring {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.score-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.score-number {
+  font-family: "NeueBit", monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--neon-green);
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.score-number.animating {
+  animation: scoreGlow 0.1s ease-in-out infinite alternate;
+}
+
+@keyframes scoreGlow {
+  from {
+    text-shadow: 0 0 5px var(--neon-green);
+  }
+  to {
+    text-shadow: 0 0 20px var(--neon-green), 0 0 30px var(--neon-green);
+  }
+}
+
+.score-max {
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 0.9rem;
+  color: var(--foreground-tertiary);
+  margin-top: 0.25rem;
+}
+
+.score-level {
+  text-align: center;
+}
+
+.score-level h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.level-badges {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.level-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  animation: badgeBounce 0.5s ease-in-out;
+}
+
+@keyframes badgeBounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.score-metric {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.metric-label {
+  font-family: "NeueBit", monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--foreground);
+  text-transform: uppercase;
+  min-width: 120px;
+}
+
+.metric-bar {
+  flex: 1;
+  height: 8px;
+  background: var(--background-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--foreground-muted);
+}
+
+.metric-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+  animation: fillGlow 2s ease-in-out infinite;
+}
+
+@keyframes fillGlow {
+  0%, 100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 10px currentColor;
+  }
+}
+
+.metric-value {
+  font-family: "NeueBit", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--neon-green);
+  min-width: 50px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .score-display {
+    padding: 1.5rem;
+  }
+  
+  .score-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .score-number {
+    font-size: 2rem;
+  }
+  
+  .score-metric {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .metric-label {
+    min-width: auto;
+  }
+  
+  .metric-bar {
+    width: 100%;
+  }
+  
+  .metric-value {
+    align-self: flex-end;
+  }
+}

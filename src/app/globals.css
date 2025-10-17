@@ -1,10 +1,39 @@
 :root {
-  --background: #182a2a;
-  --foreground: #fbf6c1;
-  --foreground-secondary: #30726e;
-  --foreground-tertiary: #c4b59c;
-  --background-light: #eee1ce;
-  --foreground-light: #255956;
+  /* ApeScoreAI Dark Mode Base */
+  --background: #0a0a0f;
+  --background-secondary: #1a1a2e;
+  --background-tertiary: #16213e;
+  
+  /* Neon Accents for Degen Energy */
+  --neon-green: #39ff14;
+  --neon-orange: #ff6600;
+  --neon-purple: #bf00ff;
+  --neon-blue: #00d4ff;
+  --neon-pink: #ff1493;
+  
+  /* Solana Brand Colors */
+  --solana-purple: #9945ff;
+  --solana-green: #14f195;
+  
+  /* Text Colors */
+  --foreground: #ffffff;
+  --foreground-secondary: var(--neon-green);
+  --foreground-tertiary: #a0a0a0;
+  --foreground-muted: #666666;
+  
+  /* Interactive States */
+  --accent-primary: var(--neon-green);
+  --accent-secondary: var(--neon-orange);
+  --accent-tertiary: var(--neon-purple);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--neon-green), var(--neon-blue));
+  --gradient-secondary: linear-gradient(135deg, var(--neon-orange), var(--neon-pink));
+  --gradient-solana: linear-gradient(135deg, var(--solana-purple), var(--solana-green));
+  
+  /* Legacy Support */
+  --background-light: #1a1a2e;
+  --foreground-light: var(--neon-green);
 }
 
 @font-face {

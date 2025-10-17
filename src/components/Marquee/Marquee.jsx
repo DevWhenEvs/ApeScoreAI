@@ -97,8 +97,7 @@ const Marquee = () => {
       <div className="marquee-wrapper" ref={wrapperRef}>
         <div className="marquee-content">
           <h1>
-            The Evolution of AI — The Evolution of AI — The Evolution of AI —
-            The Evolution of AI —
+            ApeScoreAI: Your Degen Credit Score — Trade, Score, Earn $APE — From Ape Novice to Degen God — Solana Blockchain Trading Analytics —
           </h1>
         </div>
       </div>
