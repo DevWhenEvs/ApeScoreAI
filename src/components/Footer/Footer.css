@@ -34,9 +34,41 @@ footer .container {
   font-size: 2rem;
 }
 
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 footer h1 {
   font-size: 12vw;
   text-align: center;
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+}
+
+.x-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--foreground-secondary);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.x-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--foreground);
+  transform: scale(1.1);
 }
 
 footer h1,

@@ -289,7 +289,6 @@ export default function Home() {
                     loop
                     muted
                     playsInline
-                    style={{ width: '60%', height: '60%', objectFit: 'contain' }}
                   />
                 </div>
                 <p>
