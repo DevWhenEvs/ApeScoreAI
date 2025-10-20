@@ -186,17 +186,21 @@ export default function Home() {
       <div className="app" ref={container}>
         <section className="hero">
           <div className="hero-img">
-            <img src="/images/home/background3.png" alt="" />
+            <img src="/images/background.jpeg" alt="" />
           </div>
           <div className="hero-img-overlay"></div>
           <div className="hero-img-gradient"></div>
-          <div className="container">
-            <div className="hero-copy">
-              <div className="hero-copy-col">
+          <div className="container" style={{ 
+            position: 'absolute',
+            top: '55%',
+            right: '0',
+            width: '40%',
+            padding: '0 4em 0 0'
+          }}>
+            <div className="hero-copy" style={{ justifyContent: 'flex-end', textAlign: 'right', flexDirection: 'column' }}>
+              <div className="hero-copy-col" style={{ textAlign: 'right', width: '100%' }}>
                 <ShuffleText as="h3" text="Your Degen Credit Score on" />
                 <ShuffleText as="h1" text="ApeScoreAI: The Solana Blockchain" />
-              </div>
-              <div className="hero-copy-col">
               </div>
             </div>
           </div>
@@ -336,20 +340,19 @@ export default function Home() {
                 <h3>Trading Success Metrics</h3>
                 <p className="primary">[ PNL Tracking — Win/Loss Analysis ]</p>
                 <div className="case-studies-item-inner-img">
-                  <img
-                    src="/images/home/case-study-1.jpeg"
+                  <video
+                    src="/videos/success.mp4"
                     alt="Trading success visualization"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ width: '60%', height: '60%', objectFit: 'contain' }}
                   />
                 </div>
                 <p>
                   Our AI analyzes your trading performance across Jupiter, Raydium, and major Solana DEXs. Track your profit/loss ratios, success rates, and identify patterns in your trading behavior to maximize your ApeScore.
                 </p>
-                <div className="case-studies-item-inner-link">
-                  <Link href="/archive">View Leaderboard</Link>
-                  <div className="link-icon">
-                    <MdArrowOutward size={24} />
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -359,7 +362,7 @@ export default function Home() {
                 <p className="primary">[ Transaction Volume — DeFi Engagement ]</p>
                 <div className="case-studies-item-inner-img">
                   <video
-                    src="/videos/wallet.mp4"
+                    src="/videos/wallet2.mp4"
                     alt="Wallet activity demonstration"
                     autoPlay
                     loop
@@ -370,12 +373,6 @@ export default function Home() {
                 <p>
                   Monitor transaction frequency, volume, and DeFi protocol interactions. Our algorithm tracks your engagement with liquidity pools, yield farming, and token swaps to build a comprehensive activity profile for your ApeScore.
                 </p>
-                <div className="case-studies-item-inner-link">
-                  <Link href="/archive">Analyze Activity</Link>
-                  <div className="link-icon">
-                    <MdArrowOutward size={24} />
-                  </div>
-                </div>
               </div>
             </div>
             <div className="case-studies-item case-studies-item-3">
@@ -386,7 +383,7 @@ export default function Home() {
                 </p>
                 <div className="case-studies-item-inner-img">
                   <video
-                    src="/videos/risk.mp4"
+                    src="/videos/risk2.mp4"
                     alt="Risk analysis dashboard"
                     autoPlay
                     loop
@@ -397,31 +394,17 @@ export default function Home() {
                 <p>
                   Evaluate your appetite for high-risk trades, memecoin investments, and leveraged positions. Our scoring algorithm rewards calculated risks while identifying patterns that separate true degens from paper hands.
                 </p>
-                <div className="case-studies-item-inner-link">
-                  <Link href="/archive">Check Risk Score</Link>
-                  <div className="link-icon">
-                    <MdArrowOutward size={24} />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
           <div className="case-studies-items-images col">
             <div className="case-studies-img case-studies-img-1">
-              <img src="/images/home/case-study-1.jpeg" alt="" />
+              <video src="/videos/success.mp4" alt="" autoPlay loop muted playsInline style={{ width: '60%', height: '60%', objectFit: 'contain' }} />
               <div className="hero-img-overlay"></div>
-              <div className="case-studies-img-link">
-                <Link href="/archive">
-                  <span>
-                    (&nbsp; View Article <MdArrowOutward />
-                    &nbsp;)
-                  </span>
-                </Link>
-              </div>
             </div>
             <div className="case-studies-img case-studies-img-2">
               <video
-                src="/videos/wallet.mp4"
+                src="/videos/wallet2.mp4"
                 alt="Wallet activity demonstration"
                 autoPlay
                 loop
@@ -429,18 +412,10 @@ export default function Home() {
                 playsInline
               />
               <div className="hero-img-overlay"></div>
-              <div className="case-studies-img-link">
-                <Link href="/archive">
-                  <span>
-                    (&nbsp; View Article <MdArrowOutward />
-                    &nbsp;)
-                  </span>
-                </Link>
-              </div>
             </div>
             <div className="case-studies-img case-studies-img-3">
               <video
-                src="/videos/risk.mp4"
+                src="/videos/risk2.mp4"
                 alt="Risk analysis dashboard"
                 autoPlay
                 loop
@@ -448,14 +423,6 @@ export default function Home() {
                 playsInline
               />
               <div className="hero-img-overlay"></div>
-              <div className="case-studies-img-link">
-                <Link href="/archive">
-                  <span>
-                    (&nbsp; View Article <MdArrowOutward />
-                    &nbsp;)
-                  </span>
-                </Link>
-              </div>
             </div>
           </div>
         </section>

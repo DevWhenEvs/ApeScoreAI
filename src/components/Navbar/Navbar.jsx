@@ -80,9 +80,6 @@ const Navbar = () => {
           <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
             <p>Tokenomics</p>
           </a>
-          <Link href="/archive">
-            <p>Leaderboard</p>
-          </Link>
         </div>
       </div>
     </div>
