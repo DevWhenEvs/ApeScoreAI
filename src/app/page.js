@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -20,6 +20,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const container = useRef();
+  const videoRef = useRef();
+  const [isMuted, setIsMuted] = useState(true);
 
   // initialize Lenis smooth scrolling instance on window
   const lenis = useLenis();
@@ -198,32 +200,89 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="video-section" style={{ position: 'relative', height: '100vh', width: '100%' }}>
+          <video
+            ref={videoRef}
+            src="/videos/rich.mp4"
+            autoPlay
+            loop
+            muted={isMuted}
+            playsInline
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: -1
+            }}
+          />
+          <button
+            onClick={() => setIsMuted(!isMuted)}
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '20px',
+              zIndex: 10,
+              background: 'rgba(0, 0, 0, 0.7)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '50%',
+              width: '50px',
+              height: '50px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '18px'
+            }}
+          >
+            {isMuted ? '🔇' : '🔊'}
+          </button>
+          <Marquee />
+        </section>
+
         <section className="intro" id="intro">
+          <div className="intro-bg">
+            <img src="/images/apescore_sign.png" alt="" style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: -3,
+              opacity: 0.6
+            }} />
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              background: 'rgba(255, 255, 255, 0.4)',
+              zIndex: -2
+            }} />
+          </div>
           <div className="geo-bg">
             <GeometricBackground />
           </div>
-          <Marquee />
-          <div className="intro-container">
+          <div className="intro-container" style={{ color: 'black' }}>
             <div className="container">
               <div className="col">
-                <p className="primary">[ How It Works ]</p>
+                <p className="primary" style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>[ How It Works ]</p>
               </div>
               <div className="col">
                 <div className="intro-copy">
-                  <p>
+                  <p style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>
                     ApeScoreAI revolutionizes DeFi credit scoring by gamifying your trading performance on Solana. Our AI analyzes your wallet activity, trading success, and risk-taking behavior to generate a comprehensive "Ape Score" from 0-1000.
                   </p>
-                  <p>
+                  <p style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>
                     Connect your Solana wallet and our algorithm immediately begins analyzing trades from Jupiter, Raydium, and other major DEXs. Your score unlocks exclusive rewards, $APEAI token airdrops, and access to higher-tier trading opportunities in the degen ecosystem.
                   </p>
                 </div>
                 <div className="prompt-example">
-                  <div className="prompt-example-header">
-                    <h4>
-                      // PROMPT: A sci-fi fashion portrait of a person in
-                      futuristic attire
-                    </h4>
-                  </div>
                   <div className="prompt-example-results">
                     <div className="prompt-example-result-item">
                       <div className="prompt-example-result-item-img">
@@ -231,7 +290,7 @@ export default function Home() {
                         <div className="hero-img-overlay"></div>
                       </div>
                       <div className="prompt-example-result-item-title">
-                        <h4>Powerful AI Blockchain Analysis</h4>
+                        <h4 style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>Powerful AI Blockchain Analysis</h4>
                       </div>
                     </div>
                     <div className="prompt-example-result-item">
@@ -240,7 +299,7 @@ export default function Home() {
                         <div className="hero-img-overlay"></div>
                       </div>
                       <div className="prompt-example-result-item-title">
-                        <h4>Unlock your full Degen Potential</h4>
+                        <h4 style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>Unlock your full Degen Potential</h4>
                       </div>
                     </div>
                   </div>
