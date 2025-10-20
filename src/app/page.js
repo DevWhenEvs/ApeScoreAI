@@ -325,7 +325,7 @@ export default function Home() {
                 </p>
                 <div className="case-studies-item-inner-img">
                   <video
-                    src="/videos/risk2.mp4"
+                    src="/videos/risk3.mp4"
                     alt="Risk analysis dashboard"
                     autoPlay
                     loop
@@ -357,7 +357,7 @@ export default function Home() {
             </div>
             <div className="case-studies-img case-studies-img-3">
               <video
-                src="/videos/risk2.mp4"
+                src="/videos/risk3.mp4"
                 alt="Risk analysis dashboard"
                 autoPlay
                 loop
