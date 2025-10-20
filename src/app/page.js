@@ -11,7 +11,6 @@ import Marquee from "@/components/Marquee/Marquee";
 import Footer from "@/components/Footer/Footer";
 import ShuffleText from "@/components/ShuffleText/ShuffleText";
 import GeometricBackground from "@/components/GeometricBackground/GeometricBackground";
-import { carouselItems } from "./carouselItems";
 
 import "./home.css";
 
@@ -68,6 +67,9 @@ export default function Home() {
   // handles case studies image pinning and scale animations on scroll
   useGSAP(
     () => {
+      // Refresh ScrollTrigger to recalculate after DOM changes
+      ScrollTrigger.refresh();
+      
       const images = gsap.utils.toArray(".case-studies-img");
 
       images.forEach((img, i) => {
@@ -93,8 +95,8 @@ export default function Home() {
           start: "top top",
           end: () =>
             `+=${
-              document.querySelector(".case-studies-item").offsetHeight *
-              (images.length - i - 1)
+              document.querySelector(".case-studies-item")?.offsetHeight *
+              (images.length - i - 1) || 0
             }`,
           pin: true,
           pinSpacing: false,
@@ -109,66 +111,6 @@ export default function Home() {
     { scope: container }
   );
 
-  // handles carousel slide transitions with clip-path animations
-  useGSAP(
-    () => {
-      if (typeof window === "undefined") return;
-
-      const projects = gsap.utils.toArray(".project");
-
-      ScrollTrigger.create({
-        trigger: ".carousel",
-        start: "top top",
-        end: `+=${window.innerHeight * (projects.length - 1)}`,
-        pin: true,
-        pinSpacing: true,
-        scrub: 1,
-        invalidateOnRefresh: true,
-        onUpdate: (self) => {
-          const progress = self.progress * (projects.length - 1);
-          const currentSlide = Math.floor(progress);
-          const slideProgress = progress - currentSlide;
-
-          if (currentSlide < projects.length - 1) {
-            gsap.set(projects[currentSlide], {
-              clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-            });
-
-            const nextSlideProgress = gsap.utils.interpolate(
-              "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-              "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-              slideProgress
-            );
-
-            gsap.set(projects[currentSlide + 1], {
-              clipPath: nextSlideProgress,
-            });
-          }
-
-          projects.forEach((project, index) => {
-            if (index < currentSlide) {
-              gsap.set(project, {
-                clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-              });
-            } else if (index > currentSlide + 1) {
-              gsap.set(project, {
-                clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-              });
-            }
-          });
-        },
-      });
-
-      gsap.set(projects[0], {
-        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-      });
-
-      return () => {
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-      };
-    },
-    { scope: container }
-  );
 
   return (
     <ReactLenis
@@ -399,7 +341,7 @@ export default function Home() {
           </div>
           <div className="case-studies-items-images col">
             <div className="case-studies-img case-studies-img-1">
-              <video src="/videos/success.mp4" alt="" autoPlay loop muted playsInline style={{ width: '60%', height: '60%', objectFit: 'contain' }} />
+              <video src="/videos/success.mp4" alt="" autoPlay loop muted playsInline />
               <div className="hero-img-overlay"></div>
             </div>
             <div className="case-studies-img case-studies-img-2">
@@ -475,50 +417,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="carousel">
-          {carouselItems.map((item) => (
-            <div
-              key={item.id}
-              id={`project-${item.id}`}
-              className="project"
-              style={{
-                clipPath:
-                  item.id === "01"
-                    ? "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)"
-                    : "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
-              }}
-            >
-              <div className="project-bg">
-                <img src={item.bg} alt="" />
-
-                <div className="hero-img-overlay"></div>
-                <div className="hero-img-gradient"></div>
-              </div>
-              <div className="project-main">
-                <img src={item.main} alt="" />
-              </div>
-              <div className="project-header">
-                <div className="project-id">
-                  <h2>Archive {item.id}</h2>
-                </div>
-                <div className="project-whitespace"></div>
-                <div className="project-title">
-                  <h2>{item.title}</h2>
-                </div>
-              </div>
-              <div className="project-info">
-                <div className="project-url">
-                  <Link href={item.url}>( The Journey )</Link>
-                </div>
-              </div>
-              <Link
-                href={item.url}
-                className="project-overlay-link"
-                aria-label={`View ${item.title} project`}
-              />
-            </div>
-          ))}
-        </section>
 
         <Footer />
       </div>
