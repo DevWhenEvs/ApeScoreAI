@@ -224,7 +224,7 @@ export default function Home() {
               <div className="col">
                 <div className="intro-copy">
                   <p style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>
-                    ApeScoreAI revolutionizes DeFi credit scoring by gamifying your trading performance on Solana. Our AI analyzes your wallet activity, trading success, and risk-taking behavior to generate a comprehensive "Ape Score" from 0-1000.
+                    ApeScoreAI revolutionizes DeFi credit scoring by gamifying your trading performance on Solana. Our AI analyzes your wallet activity, trading success, and risk-taking behavior to generate a comprehensive "Ape Score" from 0-100.
                   </p>
                   <p style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>
                     Connect your Solana wallet and our algorithm immediately begins analyzing trades from Jupiter, Raydium, and other major DEXs. Your score unlocks exclusive rewards, $APEAI token airdrops, and access to higher-tier trading opportunities in the degen ecosystem.
