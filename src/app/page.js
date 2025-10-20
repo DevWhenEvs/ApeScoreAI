@@ -71,18 +71,20 @@ export default function Home() {
       const images = gsap.utils.toArray(".case-studies-img");
 
       images.forEach((img, i) => {
-        const imgElement = img.querySelector("img");
+        const imgElement = img.querySelector("img") || img.querySelector("video");
 
         ScrollTrigger.create({
           trigger: img,
           start: "top bottom",
           end: "top top",
           onUpdate: (self) => {
-            gsap.to(imgElement, {
-              scale: 2 - self.progress,
-              duration: 0.1,
-              ease: "none",
-            });
+            if (imgElement) {
+              gsap.to(imgElement, {
+                scale: 2 - self.progress,
+                duration: 0.1,
+                ease: "none",
+              });
+            }
           },
         });
 
@@ -271,7 +273,7 @@ export default function Home() {
           <div className="intro-container" style={{ color: 'black' }}>
             <div className="container">
               <div className="col">
-                <p className="primary" style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>[ How It Works ]</p>
+                <p className="primary" style={{ color: 'black', fontWeight: 'bold', fontSize: '1.5em' }}>[ How It Works ]</p>
               </div>
               <div className="col">
                 <div className="intro-copy">
@@ -282,27 +284,18 @@ export default function Home() {
                     Connect your Solana wallet and our algorithm immediately begins analyzing trades from Jupiter, Raydium, and other major DEXs. Your score unlocks exclusive rewards, $APEAI token airdrops, and access to higher-tier trading opportunities in the degen ecosystem.
                   </p>
                 </div>
-                <div className="prompt-example">
-                  <div className="prompt-example-results">
-                    <div className="prompt-example-result-item">
-                      <div className="prompt-example-result-item-img">
-                        <img src="/images/home/prompt-1.jpeg" alt="" />
-                        <div className="hero-img-overlay"></div>
-                      </div>
-                      <div className="prompt-example-result-item-title">
-                        <h4 style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>Powerful AI Blockchain Analysis</h4>
-                      </div>
-                    </div>
-                    <div className="prompt-example-result-item">
-                      <div className="prompt-example-result-item-img">
-                        <img src="/images/home/prompt-2.jpeg" alt="" />
-                        <div className="hero-img-overlay"></div>
-                      </div>
-                      <div className="prompt-example-result-item-title">
-                        <h4 style={{ color: 'black', fontWeight: 'bold', fontSize: '1.1em' }}>Unlock your full Degen Potential</h4>
-                      </div>
-                    </div>
-                  </div>
+                <div className="key-features">
+                  <ul style={{ 
+                    color: 'black', 
+                    fontWeight: 'bold', 
+                    fontSize: '1.3em',
+                    listStyleType: 'disc',
+                    paddingLeft: '20px',
+                    marginTop: '2em'
+                  }}>
+                    <li style={{ marginBottom: '1em' }}>Powerful AI Blockchain Analysis</li>
+                    <li>Unlock your full Degen Potential</li>
+                  </ul>
                 </div>
               </div>
             </div>
