@@ -392,12 +392,28 @@
   }
 
   .hero h1 {
-    font-size: 3rem !important;
+    font-size: 4rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero h3 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero .container {
+    width: 95% !important;
+    top: 65% !important;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem !important;
     line-height: 1.2 !important;
   }
 
   .hero h3 {
-    font-size: 1.25rem !important;
+    font-size: 1.1rem !important;
   }
 
   .hero-icon {
