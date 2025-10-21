@@ -377,6 +377,8 @@
 @media (max-width: 900px) {
   .hero .container {
     padding: 3em 2em;
+    width: 90% !important;
+    top: 60% !important;
   }
 
   .hero-copy-col:nth-child(1) {
@@ -387,6 +389,15 @@
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 2em;
+  }
+
+  .hero h1 {
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero h3 {
+    font-size: 1.25rem !important;
   }
 
   .hero-icon {
