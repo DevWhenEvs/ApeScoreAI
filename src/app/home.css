@@ -374,6 +374,22 @@
   letter-spacing: -0.1rem;
 }
 
+@media (max-width: 1440px) {
+  .hero .container {
+    width: 50% !important;
+    padding: 0 3em 0 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .hero h3 {
+    font-size: 1.3rem !important;
+  }
+}
+
 @media (max-width: 900px) {
   .hero .container {
     padding: 3em 2em;
