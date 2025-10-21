@@ -408,29 +408,29 @@
   }
 
   .hero h1 {
-    font-size: 2.8rem !important;
-    line-height: 1.1 !important;
-  }
-
-  .hero h3 {
-    font-size: 1.2rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero .container {
-    width: 98% !important;
-    top: 75% !important;
-    padding: 0 1em 0 0 !important;
-  }
-
-  .hero h1 {
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
     line-height: 1.1 !important;
   }
 
   .hero h3 {
     font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .container {
+    width: 100% !important;
+    top: 75% !important;
+    padding: 0 1em 0 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero h3 {
+    font-size: 0.85rem !important;
   }
 }
 
@@ -441,12 +441,12 @@
   }
 
   .hero h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     line-height: 1.2 !important;
   }
 
   .hero h3 {
-    font-size: 0.9rem !important;
+    font-size: 0.75rem !important;
   }
 
   .hero-icon {
