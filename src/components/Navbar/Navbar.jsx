@@ -11,6 +11,7 @@ import "./Navbar.css";
 const Navbar = () => {
   const [time, setTime] = useState("");
   const [isClient, setIsClient] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const isHomePage = pathname === "/";
@@ -36,6 +37,7 @@ const Navbar = () => {
 
   const handleNavigation = (event, sectionId) => {
     event.preventDefault();
+    setIsMobileMenuOpen(false); // Close mobile menu when navigating
 
     if (isHomePage) {
       const lenis = window.lenis;
@@ -55,34 +57,69 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
-      <div className="navbar-col">
-        <div className="navbar-sub-col logo">
-          <Link href="/">
-            <h3>🦍 ApeScoreAI</h3>
-          </Link>
+    <>
+      <div className="navbar">
+        <div className="navbar-col">
+          <div className="navbar-sub-col logo">
+            <Link href="/">
+              <h3>🦍 ApeScoreAI</h3>
+            </Link>
+          </div>
+          <div className="navbar-sub-col time">
+            <p suppressHydrationWarning>{isClient ? time : '--:--:-- --'}</p>
+          </div>
         </div>
-        <div className="navbar-sub-col time">
-          <p suppressHydrationWarning>{isClient ? time : '--:--:-- --'}</p>
+        <div className="navbar-col">
+          {/* Desktop nav items */}
+          <div className="navbar-sub-col nav-items desktop-nav">
+            <a href="#intro" onClick={(e) => handleNavigation(e, "intro")}>
+              <p>How It Works</p>
+            </a>
+            <a
+              href="#case-studies"
+              onClick={(e) => handleNavigation(e, "case-studies")}
+            >
+              <p>Features</p>
+            </a>
+            <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
+              <p>Tokenomics</p>
+            </a>
+          </div>
+          {/* Mobile hamburger menu */}
+          <div className="mobile-menu-toggle">
+            <button 
+              className="hamburger-btn"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
       </div>
-      <div className="navbar-col">
-        <div className="navbar-sub-col nav-items">
-          <a href="#intro" onClick={(e) => handleNavigation(e, "intro")}>
-            <p>How It Works</p>
-          </a>
-          <a
-            href="#case-studies"
-            onClick={(e) => handleNavigation(e, "case-studies")}
-          >
-            <p>Features</p>
-          </a>
-          <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
-            <p>Tokenomics</p>
-          </a>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu-overlay" onClick={() => setIsMobileMenuOpen(false)}>
+          <div className="mobile-menu-content">
+            <a href="#intro" onClick={(e) => handleNavigation(e, "intro")}>
+              <p>How It Works</p>
+            </a>
+            <a
+              href="#case-studies"
+              onClick={(e) => handleNavigation(e, "case-studies")}
+            >
+              <p>Features</p>
+            </a>
+            <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
+              <p>Tokenomics</p>
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

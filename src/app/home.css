@@ -498,6 +498,36 @@
     padding: 3em 2em;
   }
 
+  .hero-copy-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    text-align: right !important;
+    margin-left: auto !important;
+    margin-right: 1em !important;
+  }
+
+  .hero h3 {
+    font-size: 1.7rem !important;
+    line-height: 1.1 !important;
+    text-align: right !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .hero h1 {
+    font-size: 5.6rem !important;
+    text-align: right !important;
+  }
+
+  .hero-subtitle {
+    font-size: 2.8rem !important;
+    white-space: normal !important;
+    text-align: right !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
   .hero-copy-col:nth-child(1) {
     width: 100%;
   }
@@ -619,5 +649,24 @@
   .project-id h2,
   .project-title h2 {
     letter-spacing: -0.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h3 {
+    font-size: 1.3rem !important;
+    line-height: 1.2 !important;
+    text-align: right !important;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem !important;
+    text-align: right !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem !important;
+    white-space: normal !important;
+    text-align: right !important;
   }
 }
