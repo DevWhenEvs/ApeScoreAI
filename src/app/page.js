@@ -132,13 +132,7 @@ export default function Home() {
           </div>
           <div className="hero-img-overlay"></div>
           <div className="hero-img-gradient"></div>
-          <div className="container" style={{ 
-            position: 'absolute',
-            top: '55%',
-            right: '0',
-            width: '50%',
-            padding: '0 3em 0 0'
-          }}>
+          <div className="container hero-text-container">
             <div className="hero-copy" style={{ justifyContent: 'flex-end', textAlign: 'right', flexDirection: 'column' }}>
               <div className="hero-copy-col" style={{ textAlign: 'right', width: '100%' }}>
                 <ShuffleText as="h3" text="Your Degen Credit Score On" />

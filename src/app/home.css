@@ -94,6 +94,14 @@
   width: 120px;
 }
 
+.hero-text-container {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  width: 50%;
+  padding: 0 3em 0 0;
+}
+
 .hero-subtitle {
   text-transform: uppercase;
   font-family: "Nippo";
@@ -493,7 +501,35 @@
   letter-spacing: -0.1rem;
 }
 
+@media (max-width: 1440px) {
+  .hero-text-container {
+    width: 58%;
+    padding: 0 2.5em 0 0;
+  }
+}
+
+@media (max-width: 1366px) {
+  .hero-text-container {
+    width: 70%;
+    padding: 0 2em 0 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-text-container {
+    width: 80%;
+    padding: 0 1.5em 0 0;
+  }
+}
+
 @media (max-width: 900px) {
+  .hero-text-container {
+    padding: 3em 1.5em;
+    width: 95%;
+    top: 60%;
+    right: 2.5%;
+  }
+
   .hero .container {
     padding: 3em 2em;
   }
@@ -508,7 +544,7 @@
   }
 
   .hero h3 {
-    font-size: 1.7rem !important;
+    font-size: 1.5rem !important;
     line-height: 1.1 !important;
     text-align: right !important;
     width: 100% !important;
@@ -516,16 +552,20 @@
   }
 
   .hero h1 {
-    font-size: 5.6rem !important;
+    font-size: 4rem !important;
     text-align: right !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.05em !important;
   }
 
   .hero-subtitle {
-    font-size: 2.8rem !important;
+    font-size: 1.8rem !important;
     white-space: normal !important;
     text-align: right !important;
     width: 100% !important;
     display: block !important;
+    letter-spacing: 0.05em !important;
+    word-spacing: 0.2em !important;
   }
 
   .hero-copy-col:nth-child(1) {
@@ -652,21 +692,62 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .hero-text-container {
+    width: 95%;
+    top: 70%;
+    right: 2.5%;
+    padding: 2em 1em;
+  }
+
   .hero h3 {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
+    line-height: 1.1 !important;
+    text-align: right !important;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem !important;
+    text-align: right !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem !important;
+    white-space: normal !important;
+    text-align: right !important;
+    letter-spacing: 0.05em !important;
+    word-spacing: 0.3em !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-container {
+    width: 100%;
+    top: 75%;
+    right: 0;
+    padding: 2em 1em;
+  }
+
+  .hero h3 {
+    font-size: 0.85rem !important;
     line-height: 1.2 !important;
     text-align: right !important;
   }
 
   .hero h1 {
-    font-size: 2.4rem !important;
+    font-size: 1.6rem !important;
     text-align: right !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.05em !important;
   }
 
   .hero-subtitle {
-    font-size: 1.8rem !important;
+    font-size: 1.2rem !important;
     white-space: normal !important;
     text-align: right !important;
+    letter-spacing: 0.05em !important;
+    word-spacing: 0.4em !important;
   }
 }
