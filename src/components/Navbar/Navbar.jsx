@@ -84,6 +84,9 @@ const Navbar = () => {
             <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
               <p>Tokenomics</p>
             </a>
+            <a href="https://t.me/your_bot_username" target="_blank" rel="noopener noreferrer">
+              <p>Telegram Bot</p>
+            </a>
           </div>
           {/* Mobile hamburger menu */}
           <div className="mobile-menu-toggle">
@@ -115,6 +118,9 @@ const Navbar = () => {
             </a>
             <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
               <p>Tokenomics</p>
+            </a>
+            <a href="https://t.me/your_bot_username" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
+              <p>Telegram Bot</p>
             </a>
           </div>
         </div>
