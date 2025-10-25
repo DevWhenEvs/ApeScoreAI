@@ -136,13 +136,14 @@ export default function Home() {
             position: 'absolute',
             top: '55%',
             right: '0',
-            width: '40%',
-            padding: '0 4em 0 0'
+            width: '50%',
+            padding: '0 3em 0 0'
           }}>
             <div className="hero-copy" style={{ justifyContent: 'flex-end', textAlign: 'right', flexDirection: 'column' }}>
               <div className="hero-copy-col" style={{ textAlign: 'right', width: '100%' }}>
-                <ShuffleText as="h3" text="Your Degen Credit Score on" />
-                <ShuffleText as="h1" text="ApeScoreAI: The Solana Blockchain" />
+                <ShuffleText as="h3" text="Your Degen Credit Score On" />
+                <ShuffleText as="h1" text="APESCOREAI:" />
+                <ShuffleText as="div" text="The Solana Blockchain" className="hero-subtitle" style={{ marginTop: '0.2em' }} />
               </div>
             </div>
           </div>

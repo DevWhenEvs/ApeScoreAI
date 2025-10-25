@@ -94,6 +94,17 @@
   width: 120px;
 }
 
+.hero-subtitle {
+  text-transform: uppercase;
+  font-family: "Nippo";
+  font-weight: 400;
+  font-size: 3.68rem;
+  line-height: 90%;
+  letter-spacing: -0.2rem;
+  color: var(--foreground);
+  white-space: nowrap;
+}
+
 /* intro section */
 .intro {
   position: relative;
