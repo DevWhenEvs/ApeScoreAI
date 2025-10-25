@@ -84,7 +84,7 @@ const Navbar = () => {
             <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
               <p>Tokenomics</p>
             </a>
-            <a href="https://t.me/your_bot_username" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/ApeScoreAI_bot" target="_blank" rel="noopener noreferrer">
               <p>Telegram Bot</p>
             </a>
           </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
             <a href="#works" onClick={(e) => handleNavigation(e, "works")}>
               <p>Tokenomics</p>
             </a>
-            <a href="https://t.me/your_bot_username" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
+            <a href="https://t.me/ApeScoreAI_bot" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
               <p>Telegram Bot</p>
             </a>
           </div>
